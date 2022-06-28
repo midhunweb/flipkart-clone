@@ -1,0 +1,808 @@
+
+body {
+	background-image: linear-gradient(180deg, #f1f3f6 65% , white 65%, white 88.7% , #152336 88.7%);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	margin: 0;
+}
+
+.sticky {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	z-index:1;
+}
+.sticky {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto;  
+  overflow: hidden;
+  background-color: #0C73EB;
+  margin: 0;
+  left: 0;
+}
+
+#flipkartplus {
+	grid-column-start: 1;
+	grid-column-end: 3;
+	text-align: right;
+	padding: 10px;
+	align-items: right;
+	align-content: right;
+}
+
+#flipkartplus a:hover {
+	text-decoration: underline;
+}
+
+
+#exp {
+	font-size: 12px;
+	color: white; 
+}
+
+#plus {
+	font-size: 12px;
+	color:gold;
+}
+
+
+.form {
+	display:flex;
+	flex-direction:row;
+}
+
+.search-container {
+	grid-column-start: 3;
+	grid-column-end: 7;
+	padding: 10px;
+	position: absolute;
+}
+
+.search-container input {
+	height: 35px;
+	width: 580px;
+	float: left;
+	border: white;
+	box-shadow: 2px 2px 2px blue;
+	font-size: 13.45px;
+	font-family: 'Roboto',Arial,sans-serif;
+}
+
+.search-container input:focus {
+	outline: none;
+}
+
+.searchbutton {
+	height: 34px;
+	width: 50px;
+	background: transparent;
+	border-left:none;
+	float: left;
+	cursor: pointer;
+	border: white;
+	outline: none;
+	margin-left: -60px;
+}
+
+.search-button img{
+	
+	object-fit: cover;
+}
+
+
+.sticky .login {
+	background-color: white;
+	grid-column-start:10;
+	grid-column-end:11;
+	text-align: center;
+	font-family: 'Roboto',Arial,sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	width: 116px;
+	height: 23px;
+	padding: 2px;
+	margin-top: 13px;
+	padding-top: 6px;
+	box-shadow: 2px 2px 2px 2px #0C73EA;
+}
+
+.login button {
+	background-color: white;
+	text-align: center;
+	font-family: 'Roboto',Arial,sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	width: 116px;
+	height: 23px;
+	padding: 2px;
+	border: 0px;
+	cursor: pointer;
+}
+	
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #0C73EB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  font-family: 'Roboto',Arial,sans-serif;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  padding-top: 5px;
+  grid-column-start: 11;
+  grid-column-end: 12;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: fixed;
+  background-color: #fff;
+  width: 280px;
+  height: 200px;
+   z-index: 2;
+  overflow: hidden;
+  text-align: center;
+  align-content: center;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  text-decoration: none;
+  display: block;
+   width: 260px;
+   border: 1px;
+   padding: 10px;
+   box-shadow: 0px 0px 1px grey;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #0C73EA;}
+
+.cart {
+	grid-column-start: 12;
+	grid-column-end: 13;
+    padding-top: 21px;
+}
+
+.cart a {
+	background-color: #0C73EB;
+    color: white;
+	font-family: 'Roboto',Arial,sans-serif;
+	font-size: 16px;
+
+}
+
+
+
+/* Login Page */
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; 
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 700px; 
+  height: 600px; 
+  overflow: auto; /* Enable scroll if needed */
+  background-color: linear-gradient(90 degree, #f1f3f6, white 40%); /* Fallback color */
+  background-color: #0C73EB;
+  padding-top: 60px;
+  border: 10px solid #FFD700;
+  font-family: 'Roboto',Arial,sans-serif;
+  color: grey;
+}
+
+#beauty {
+	align-content: center;
+	text-align: center;
+}
+
+.container {
+	font-size: 14px;
+	font-weight: normal;
+	padding: 20px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+
+.box {
+	border: none;
+	border-bottom: 1px solid black;
+	width: 400px;
+}
+
+.box:focus {
+	outline: none;
+}
+
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: white;
+  margin: 10px auto; 
+  border: 1px solid white;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  /* Position it in the top right corner outside of the modal */
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+/* Close button on hover */
+.close:hover,
+.close:focus {
+  color: yellow;
+  cursor: pointer;
+}
+
+.login {
+	color: white;
+	background-color: orange;
+	border: none;
+	font-size: 16px;
+	text-align: center;
+	width: 250px;
+	height: 30px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.otp {
+
+	color: blue;
+	background-color: white;
+	border: none;
+	font-size: 16px;
+	text-align: center;
+	width: 250px;
+	height: 30px;
+	font-weight: bold;
+	cursor: pointer;
+	box-shadow: 0px 0px 1px grey;
+}
+
+#terms {
+	color: grey;
+	font-size: 12px;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
+
+/* Products menu */
+.products {
+	display: grid;
+	grid-template-columns: auto auto auto auto auto auto auto auto auto;
+	background-color: white;
+	align-content: center;
+	padding-left: 40px;
+	padding-right: 40px;
+	justify-content: center;
+	grid-column-gap: 50px;
+	text-align: center;
+	font-family: 'Roboto',Arial,sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	padding: 15px;
+	box-shadow: 0px 0px 1px 0px grey;
+}
+
+
+.goods img {
+	width: 80px;
+	height: 80px;
+}
+
+.goods a {
+	text-decoration: none;
+	color: black;
+}
+
+.goods a:hover {
+	color: #0C73EA;
+}
+
+
+
+/*Navigation Dropdown Button */
+.navdropbtn {
+  background-color: white;
+  color: black;
+ 
+  font-size: 14px;
+  border: none;
+  font-family: 'Roboto',Arial,sans-serif;
+}
+
+/* The container <div> - needed to position the nav dropdown content */
+.navdropdown {
+  position: relative;
+  display: inline-block;
+ 
+
+}
+
+/* Nav Dropdown Content (Hidden by Default) */
+.navdropdown-content {
+  display: none;
+  position: fixed;
+  background-color: #fff;
+  width: 190px;
+  height: 200px;
+   z-index: 2;
+  overflow: hidden;
+  text-align: left;
+  align-content: center;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 10px;
+  
+}
+
+/* Links inside the nav dropdown */
+.navdropdown-content a {
+  color: black;
+  text-decoration: none;
+  display: block;
+   width: 260px;
+   border: 1px;
+   padding: 10px;
+   box-shadow: 0px 0px 1px grey;
+}
+
+/* Change color of navdropdown links on hover */
+.navdropdown-content a:hover {background-color: #ddd;}
+
+/* Show the nav dropdown menu on hover */
+.navdropdown:hover .navdropdown-content {display: block;}
+
+/* Change the background color of the navdropdown button when the dropdown content is shown */
+.navdropdown:hover .navdropbtn {color: #0C73EA;}
+
+.navdropdown img {
+	width: 80px;
+	height: 80px;
+}
+
+
+
+/*Navigation Drb */
+.navdrb {
+  background-color: white;
+  color: black;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  font-family: 'Roboto',Arial,sans-serif;
+  position: relative;
+}
+
+/* The container <div> - needed to position the nav dropdown content */
+.navdr {
+ 
+  display: inline-block;
+  position: relative;
+
+}
+
+/* Nav Dropdown Content (Hidden by Default) */
+.navdrb-content {
+  display: none;
+  position: fixed;
+  top: 185px;
+  left: 900px;
+  background-color: #fff;
+  width: 280px;
+  height: 200px;
+   z-index: 2;
+  overflow: hidden;
+  text-align: center;
+  align-content: right;
+  font-size: 14px;
+  font-family: 'Roboto',Arial,sans-serif;
+  font-weight: normal;
+}
+.navdrb-content1 {
+  display: none;
+  position: fixed;
+  top: 185px;
+  left: 620px;
+  background-color: #fff;
+  width: 280px;
+  height: 200px;
+   z-index: 2;
+  overflow: hidden;
+  text-align: center;
+  align-content: right;
+  font-size: 14px;
+  font-family: 'Roboto',Arial,sans-serif;
+  font-weight: normal;
+}
+.navdrb-content2 {
+  display: none;
+  position: fixed;
+  top: 185px;
+  left: 980px;
+  background-color: #fff;
+  width: 280px;
+  height: 200px;
+   z-index: 2;
+  overflow: hidden;
+  text-align: center;
+  align-content: right;
+  font-size: 14px;
+  font-family: 'Roboto',Arial,sans-serif;
+  font-weight: normal;
+}
+
+
+.navdrb-content a {
+  color: black;
+  text-decoration: none;
+  display: block;
+   width: 260px;
+   padding: 10px;
+  
+}
+.navdrb-content1 a {
+  color: black;
+  text-decoration: none;
+  display: block;
+   width: 260px; 
+   padding: 10px;
+  
+}
+.navdrb-content2 a {
+  color: black;
+  text-decoration: none;
+  display: block;
+   width: 260px; 
+   padding: 10px;
+  
+}
+
+
+.navdrb-content a:hover {background-color: #E6F7FF; color: #0C73EA;}
+.navdrb-content1 a:hover {background-color: #E6F7FF; color: #0C73EA;}
+.navdrb-content2 a:hover {background-color: #E6F7FF; color: #0C73EA;}
+
+
+.navdr:hover .navdrb-content {display: block;}
+.navdr:hover .navdrb-content1 {display: block;}
+.navdr:hover .navdrb-content2 {display: block;}
+
+
+.navdr:hover .navdrb {color: #0C73EA;}
+
+.navdrb:hover {background-color: #E6F7FF;}
+
+
+/* Carousel */
+#slider {
+  position: relative;
+  width: 1550px;
+  height: 280px;
+  margin: 10px;
+  margin-left:12px;
+  overflow: hidden;
+  
+}
+
+#slider ul {
+  position: relative;
+  list-style: none;
+  height: 100%;
+  width: 10000%;
+  padding: 0;
+  margin: 0;
+  transition: all 750ms ease;
+  left: 0;
+}
+#slider ul li {
+  position: relative;
+  height: 100%;
+
+  float: left;
+}
+
+#slider ul li img{
+  width: 1550px;
+  height: 280px;
+}
+
+#slider #prev, #slider #next {
+  width: 50px;
+  line-height: 50px;
+  text-align: center;
+  
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  border-radius: 75%;
+  font-size: 2rem;
+   text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  transform: translateY(-50%);
+  transition: all 150ms ease;
+}
+
+#slider #prev {
+  left: 10px;
+}
+#slider #next {
+  right: 10px;
+}
+
+#slider #prev:hover, #slider #next:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  text-shadow: 0;
+}
+
+/* Top Offers*/
+.first-grid {
+	display:grid;
+	grid-template-columns: auto auto;
+	column-gap: 10px;
+	height: 350px;
+	margin-bottom:20px;
+	margin-left:6px;
+	margin-right:2px;
+	box-shadow: 2px 2px 3px 2px Lavender;
+}
+
+.grid-container {
+	position:relative;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  align-content: center;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid #fff;
+  background-color: #fff;
+  grid-column-gap: 50px;
+  text-align: center;
+  font-family: 'Roboto',Arial,sans-serif;
+  padding:10px;
+  box-shadow: 2px 2px 3px 2px Lavender;
+ }
+ 
+ .grid-container .topoffer {
+	 grid-row-start: 1;
+	 grid-row-end: 3;
+	 padding: 10px;
+ }
+ 
+ .grid-container a:link {
+	color:black;
+	text-decoration: none;
+}
+
+.pic-grid{
+	float:left;
+	padding: 2px;
+}
+
+/* Product grids*/
+
+.head-container {
+	display: grid;
+	position: relative;
+	grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto 160px;
+    border: 1px solid #fff;
+    background-color: #fff;
+	margin: 12px 4px 1px 6px;
+	box-shadow: 2px 2px 3px 2px Lavender;
+}
+
+.head-container .headin {
+	font-family: Helvetica;
+	font-size: 22px;
+	text-align: left;
+	padding-left: 16px;
+	grid-column-start: 1;
+    grid-column-end: 12;
+	font-weight: bold;
+
+}
+
+.head-container .button {
+	font-family: Helvetica;
+	font-size: 14px;
+	font-weight: bold;
+	width: 130px;
+	height: 40px;
+	padding: 2px;
+	margin-top: 16px;
+	box-shadow: 2px 2px 3px 3px #f1f3f6;
+	text-align: center;
+    background-color: #0C73EB;
+	
+}
+	
+.body-container {
+	position:relative;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto;
+  height: 250px;
+  align-content: center;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid #fff;
+  background-color: #fff;
+  grid-column-gap: 50px;
+  text-align: center;
+  margin-left: 6px;
+  margin-right: 4px;
+  padding:30px;
+  padding-top:20px;
+  box-shadow: 2px 2px 3px 3px Lavender;
+}
+
+.name {
+	font-size: 14px;
+	font-family: 'Roboto',Arial,sans-serif;
+	font-weight: bold;
+}
+
+	
+.name .off {
+	font-size: 14px;
+	font-weight: normal;
+	color: green;
+}
+
+ .name .now {
+	font-size: 12px;
+	font-weight: normal;
+	color: DimGrey;
+}
+
+
+.body-container a:link {
+	color:black;
+	text-decoration: none;
+}
+
+/* About Flipkart*/
+.flipkart {
+	color: #71797E;
+	font-family: 'Roboto',Arial,sans-serif;
+	font-size: 11px;
+	padding: 15px;
+	margin-top: 50px;
+	background-color: white;
+	border-top: 1px solid #DCDCDC;
+}
+
+/*Footer */
+.foot1 {
+	position:relative;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto ;
+  color: white;
+  background-color: #152336;
+  align-content: start;
+  align-items: start;
+  justify-content: space-around;
+  justify-items: start;
+  grid-column-gap: 50px;
+  text-align: justified;
+  margin-left: 6px;
+  margin-right: 4px;
+  padding:20px;
+  font-family: 'Roboto',Arial,sans-serif;
+  font-size: 12px;
+}
+
+.foot1 a:link {
+	color: white;
+	text-decoration: none;
+}
+
+.foot1 a:hover {
+	text-decoration-line: underline;
+}
+
+#title {
+	color: grey;
+}
+
+#margin {
+	border-right: 0.5px solid #f1f3f6;
+	height: 250px;
+}
+
+.foot2 {
+	position:relative;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto ;
+  color: white;
+  background-color: #152336;
+  align-content: start;
+  align-items: start;
+  justify-content: space-around;
+  justify-items: start;
+  grid-column-gap: 50px;
+  text-align: justified;
+  margin-left: 6px;
+  margin-right: 4px;
+  padding:20px;
+  font-family: 'Roboto',Arial,sans-serif;
+  font-size: 12px;
+  border-top:1px groove #f1f3f6;
+}
+
+#im a:link {
+	color:white;
+	text-decoration:none;
+}
+
+
+#pic {
+	grid-column-start: 6;
+	grid-column-end: 8;
+}
+
+.flipkart h2 {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.flipkart h3 {
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.topoffer .button {
+	font-family: Helvetica;
+	font-size: 14px;
+	font-weight: bold;
+	width: 130px;
+	height: 40px;
+	padding: 2px;
+	margin-top: 16px;
+	box-shadow: 2px 2px 3px 3px #f1f3f6;
+	text-align: center;
+    background-color: #0C73EB;
+	
+}
+
+
+
